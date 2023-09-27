@@ -1,6 +1,6 @@
+import { Produto } from '../Models/Produto.model';
 import { ProdutoService } from './../services/produto.service';
 import { Component, OnInit } from '@angular/core';
-import { Produto } from '../models/Produto.model';
 
 @Component({
   selector: 'app-cadastro-produto',
@@ -20,14 +20,15 @@ export class CadastroProdutoPage implements OnInit {
   constructor(private prodService: ProdutoService) { }
 
   ngOnInit() {
-  }
 
+  }
   salvarProduto(){
     this.prodService.salvar(this.produto).subscribe(retorno => {
       this.produto = retorno;
-      alert("Produto: " + this.produto.id + " oi salvo!")
+      alert("Produto: " + this.produto.id + "Salvo!")
     });
     this.prodService.salvar(this.produto);
   }
 
 }
+

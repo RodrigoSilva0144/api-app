@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from '../models/Produto.model';
+
 import { ProdutoService } from '../services/produto.service';
+import { Produto } from '../Models/Produto.model';
+
+
 
 @Component({
   selector: 'app-tab2',
